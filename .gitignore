@@ -1,0 +1,9 @@
+dist/
+build/
+*.spec
+__pycache__/
+_internal/
+.vscode/
+venv/
+*.txt
+!requirements.txt

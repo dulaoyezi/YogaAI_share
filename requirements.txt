@@ -1,0 +1,11 @@
+# 核心算法与数据处理
+numpy
+mediapipe==0.10.9
+opencv-python
+
+# 界面与交互框架
+PySide6
+pyttsx3
+
+# 打包工具 
+pyinstaller
