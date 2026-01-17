@@ -7,3 +7,4 @@ _internal/
 venv/
 *.txt
 !requirements.txt
+my_yoga_env/
