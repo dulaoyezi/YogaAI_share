@@ -2,35 +2,60 @@ import numpy as np
 
 class PostureAnalyzer:
     def __init__(self):
-        # 阈值：低于此度数视为健康
+        # 阈值设定
         self.THRESH = {"sh": 3.8, "pl": 3.0, "sc": 4.5}
+        
+        # 初始化平滑缓冲区，防止 AttributeError
+        self.prev_metrics = {"sh": 0.0, "pl": 0.0, "sc": 0.0}
+        
+        # 平滑系数 (0.0 < alpha <= 1.0)
+        # alpha 越小越平滑（抖动小），但延迟会变高
+        self.alpha = 0.3
 
     def get_metrics(self, points):
-        """
-        计算生物力学指标并进行数值限幅
-        使用向量夹角算法优化脊柱侧弯检测
-        """
-        # 1. 高低肩角度 (Landmarks 11, 12)
-        sh_raw = np.degrees(np.arctan2(points[11][1] - points[12][1], points[11][0] - points[12][0]))
-        sh = np.clip(sh_raw, -45.0, 45.0) # 限幅 45°
+        # 如果没检测到人，直接返回上一次的指标，防止崩溃
+        if points is None or len(points) < 25: 
+            return self.prev_metrics, False
 
-        # 2. 骨盆倾斜度 (Landmarks 23, 24)
-        pl_raw = np.degrees(np.arctan2(points[23][1] - points[24][1], points[23][0] - points[24][0]))
-        pl = np.clip(pl_raw, -45.0, 45.0) # 限幅 45°
+        try:
+            # 强制转换为 NumPy 数组，确保向量数学运算（+ /）有效
+            pts = np.array(points)
+            # 如果胯部已经到了画面底部 10% 的区域（> 0.9），判定为“未全身入镜”
+            if pts[23][1] > 0.9 or pts[24][1] > 0.9:
+                return self.prev_metrics, False
 
-        # 3. 脊柱侧向偏移 (向量夹角优化版)
-        mid_sh = (points[11] + points[12]) / 2  # 肩部中点
-        mid_pl = (points[23] + points[24]) / 2  # 骨盆中点
-        
-        dx = mid_sh[0] - mid_pl[0]
-        dy = mid_sh[1] - mid_pl[1]
-        
-        # 绝对值 dy 确保参考轴始终向上，避免 180° 翻转
-        # 计算出的角度是相对于“垂直向上”的偏离角
-        sc_raw = np.degrees(np.arctan2(dx, abs(dy))) 
-        sc = np.clip(sc_raw, -90.0, 90.0) # 限幅 90°
-        
-        return {"sh": sh, "pl": pl, "sc": sc}
+            # 高低肩 (Landmarks 11, 12)
+            sh_raw = np.degrees(np.arctan2(pts[11][1] - pts[12][1], 
+                                         pts[11][0] - pts[12][0]))
+            sh = np.clip(sh_raw, -45.0, 45.0)
+
+            # 骨盆倾斜度 (Landmarks 23, 24)
+            pl_raw = np.degrees(np.arctan2(pts[23][1] - pts[24][1], 
+                                         pts[23][0] - pts[24][0]))
+            pl = np.clip(pl_raw, -45.0, 45.0)
+
+            # 脊柱中轴线 
+            mid_sh = (pts[11] + pts[12]) / 2
+            mid_pl = (pts[23] + pts[24]) / 2
+            
+            dx = mid_sh[0] - mid_pl[0]
+            dy = mid_sh[1] - mid_pl[1] 
+            
+            sc_raw = np.degrees(np.arctan2(dx, abs(dy)))
+            sc = np.clip(sc_raw, -90.0, 90.0)
+
+            # EMA 平滑滤波
+            current_metrics = {"sh": sh, "pl": pl, "sc": sc}
+            for key in current_metrics:
+                self.prev_metrics[key] = (self.alpha * current_metrics[key] + 
+                                        (1 - self.alpha) * self.prev_metrics[key])
+
+            return self.prev_metrics, True
+
+        except Exception as e:
+            # 打印具体错误到控制台，方便调试
+            print(f"PostueAnalyzer Error: {e}")
+            return self.prev_metrics, False
 
     def analyze_clinical(self, m, name="患者"):
         status = {"neck": "ok", "shoulder_l": "ok", "shoulder_r": "ok", "pelvis": "ok", "spine": "ok"}
