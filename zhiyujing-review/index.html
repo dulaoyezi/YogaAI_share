@@ -19,14 +19,23 @@ button,input{font:inherit}.shell{max-width:1540px;margin:auto;padding:0 24px 28p
 .tools{display:flex;align-items:center;gap:12px}.iconbtn{width:42px;height:42px;border:1px solid var(--line);background:var(--paper);border-radius:50%;display:grid;place-items:center;color:var(--olive-deep)}.reviewer{display:flex;gap:10px;align-items:center;padding:7px 11px;border:1px solid var(--line);border-radius:30px;background:var(--paper)}.avatar{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--olive-deep);color:white;font-weight:700}.reviewer b{font-size:13px}.reviewer span{display:block;color:var(--muted);font-size:11px}
 .hero{margin-top:18px;min-height:200px;border-radius:28px;overflow:hidden;position:relative;background:linear-gradient(90deg,rgba(247,245,239,.98) 0 38%,rgba(247,245,239,.77) 52%,rgba(247,245,239,.28) 70%),radial-gradient(circle at 75% 40%,#f2d991 0,transparent 18%),linear-gradient(135deg,#dce4d3,#f8f2df 55%,#c8d3b9);box-shadow:var(--shadow);border:1px solid rgba(101,117,83,.10)}
 .hero:after{content:"";position:absolute;right:5%;bottom:-28%;width:420px;height:320px;background:radial-gradient(ellipse,#7c8c68 0 22%,transparent 24%),radial-gradient(ellipse at 60% 56%,#3d4b33 0 10%,transparent 11%),radial-gradient(ellipse at 56% 70%,#6c775d 0 13%,transparent 14%);opacity:.22;filter:blur(.2px);transform:rotate(-6deg)}
-.hero-inner{position:relative;z-index:2;padding:34px 46px 28px}.eyebrow{font-size:12px;letter-spacing:.2em;color:var(--maple-deep);font-weight:700}.hero h2{font:700 40px/1.15 Georgia,"STSong",serif;margin:10px 0 8px;color:#183122}.hero p{margin:0;color:#6e786e;font-size:16px}.hero-actions{margin-top:24px;display:flex;gap:12px;align-items:center}.upload{flex:1;max-width:790px;height:58px;border:1px solid #ded8cd;border-radius:18px;background:rgba(255,255,255,.90);display:flex;align-items:center;padding:0 14px 0 18px;box-shadow:0 10px 24px rgba(0,0,0,.04)}.upload label{display:flex;align-items:center;gap:12px;font-weight:700;cursor:pointer;white-space:nowrap}.upload input{display:none}.upload .hint{margin-left:16px;color:#999;font-size:12px;border-left:1px solid var(--line);padding-left:16px;flex:1}.btn{height:46px;border-radius:13px;border:0;padding:0 18px;cursor:pointer;font-weight:700}.btn.secondary{background:#f3f1eb;color:#354334}.btn.primary{background:linear-gradient(135deg,var(--olive),#48643e);color:white;box-shadow:0 8px 20px rgba(72,100,62,.28)}
+.hero-inner{position:relative;z-index:2;padding:34px 46px 28px}.eyebrow{font-size:12px;letter-spacing:.2em;color:var(--maple-deep);font-weight:700}.hero h2{font:700 40px/1.15 Georgia,"STSong",serif;margin:10px 0 8px;color:#183122}.hero p{margin:0;color:#6e786e;font-size:16px}
+.control-strip{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.select-wrap{display:flex;align-items:center;gap:8px;background:rgba(255,255,255,.82);border:1px solid #ded8cd;border-radius:13px;padding:9px 12px}
+.select-wrap span{font-size:11px;color:#7a8178;font-weight:700}.select-wrap select{border:0;background:transparent;color:#273426;font-weight:700;outline:none}
+.engine-badge{display:inline-flex;align-items:center;gap:7px;padding:9px 12px;border-radius:999px;background:#eef3e8;color:#40543a;font-size:11px;font-weight:800}
+.engine-badge:before{content:"";width:7px;height:7px;border-radius:50%;background:#708962;box-shadow:0 0 0 4px #e2eadc}
+.tech-strip{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;margin:12px 16px 16px}
+.tech{padding:12px;border:1px solid #ece7dd;border-radius:13px;background:#faf8f2}.tech b{display:block;font-size:16px;color:#354c30}.tech span{font-size:10px;color:#858b82}
+.notice{margin:0 16px 14px;padding:10px 12px;background:#fbf4df;border:1px solid #ead6a2;border-radius:12px;color:#7b6227;font-size:11px;line-height:1.6}
+.hero-actions{margin-top:24px;display:flex;gap:12px;align-items:center}.upload{flex:1;max-width:790px;height:58px;border:1px solid #ded8cd;border-radius:18px;background:rgba(255,255,255,.90);display:flex;align-items:center;padding:0 14px 0 18px;box-shadow:0 10px 24px rgba(0,0,0,.04)}.upload label{display:flex;align-items:center;gap:12px;font-weight:700;cursor:pointer;white-space:nowrap}.upload input{display:none}.upload .hint{margin-left:16px;color:#999;font-size:12px;border-left:1px solid var(--line);padding-left:16px;flex:1}.btn{height:46px;border-radius:13px;border:0;padding:0 18px;cursor:pointer;font-weight:700}.btn.secondary{background:#f3f1eb;color:#354334}.btn.primary{background:linear-gradient(135deg,var(--olive),#48643e);color:white;box-shadow:0 8px 20px rgba(72,100,62,.28)}
 .grid-main{display:grid;grid-template-columns:1.04fr 2fr;gap:14px;margin-top:14px}.card{background:rgba(255,254,251,.96);border:1px solid #ebe6dc;border-radius:var(--radius);box-shadow:0 10px 30px rgba(34,46,32,.055)}.card-title{display:flex;align-items:center;justify-content:space-between;padding:18px 20px 12px}.title-left{display:flex;align-items:center;gap:9px;font-weight:800}.micro{font-size:12px;color:var(--muted)}
 .video-wrap{margin:0 14px 14px;height:420px;border-radius:17px;overflow:hidden;background:linear-gradient(155deg,#d7d0c2,#76846a);position:relative}.video-wrap video{width:100%;height:100%;object-fit:cover;display:none;background:#111}.pose-demo{height:100%;display:grid;place-items:center;position:relative}.pose-svg{width:84%;height:84%}.pose-tag{position:absolute;right:18px;top:18px;background:rgba(33,45,31,.76);color:#fff;padding:10px 14px;border-radius:12px;font-size:12px}.overlay-tools{position:absolute;right:16px;top:72px;display:grid;gap:9px}.tool-pill{background:rgba(255,255,255,.88);padding:9px 12px;border-radius:10px;font-size:12px;border:1px solid rgba(255,255,255,.6)}
 .score-panel{padding-bottom:10px}.score-row{display:grid;grid-template-columns:176px repeat(4,1fr);gap:12px;padding:4px 16px 8px}.score-ring{height:150px;display:grid;place-items:center;position:relative}.ring{width:132px;height:132px;border-radius:50%;background:conic-gradient(var(--olive) 0 62%,var(--maple) 62% 86%,#ece8de 86%);display:grid;place-items:center}.ring:after{content:"";width:98px;height:98px;border-radius:50%;background:var(--paper);position:absolute}.ring b,.ring small{position:absolute;z-index:2}.ring b{font-size:36px;top:48px}.ring small{font-size:11px;top:92px;color:var(--muted)}.metric{border:1px solid #ece7dd;border-radius:16px;padding:18px 16px;background:linear-gradient(180deg,#fff,#fbfaf6);min-height:124px}.metric .ico{width:34px;height:34px;border-radius:12px;background:var(--olive-soft);display:grid;place-items:center;color:var(--olive-deep);font-size:18px}.metric strong{display:block;font-size:25px;margin:11px 0 5px}.metric span{color:#6f776e;font-size:12px}.bar{height:5px;background:#ece8de;border-radius:999px;margin-top:12px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--maple),var(--olive));border-radius:999px}.summary{margin:0 18px 12px;padding:12px 16px;border-radius:13px;background:#f8f6ef;color:#465046;font-size:14px}
 .diagnosis{margin:0 16px 16px;padding:16px;border:1px solid #ece7dd;border-radius:16px;background:#fff}.diag-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:10px}.diag{min-height:112px;border-radius:14px;background:#f7f5ef;padding:14px;position:relative}.diag em{font-style:normal;font-size:11px;color:var(--olive);font-weight:800}.diag b{display:block;margin:7px 0 3px;font-size:14px}.diag span{font-size:12px;color:#727a71;line-height:1.5}.step{position:absolute;right:10px;top:10px;font:700 22px Georgia;color:#ded6c6}
 .dashboard{display:grid;grid-template-columns:1.1fr 1.25fr 1.25fr 1.1fr 1fr;gap:12px;margin-top:14px}.dash{padding:15px 16px;min-height:180px}.dash h4{margin:0 0 13px;font-size:14px;display:flex;align-items:center;gap:8px}.dash h4:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--olive);box-shadow:0 0 0 4px var(--olive-soft)}.rowbar{display:grid;grid-template-columns:80px 1fr 40px;align-items:center;gap:8px;font-size:11px;margin:11px 0}.rowbar .track{height:7px;background:#ebe7dd;border-radius:999px}.rowbar .fill{height:100%;background:linear-gradient(90deg,var(--maple),#e9c56d);border-radius:999px}.chart{width:100%;height:118px}.records{display:grid;gap:8px}.record{display:grid;grid-template-columns:1fr auto;gap:8px;padding:9px 10px;border-radius:11px;background:#f6f4ee;font-size:11px}.record b{color:var(--olive-deep)}.donut{width:98px;height:98px;border-radius:50%;margin:0 auto;background:conic-gradient(var(--olive) 0 60%,var(--maple) 60% 80%,#e9e5dc 80%);display:grid;place-items:center}.donut:after{content:"3/5";width:67px;height:67px;border-radius:50%;background:#fff;display:grid;place-items:center;font-weight:800}.legend{font-size:11px;color:#6f776e;display:grid;gap:6px;margin-top:10px}.legend i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px}.foot-features{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;margin-top:14px;border-radius:20px;overflow:hidden;border:1px solid #ebe6dc;background:#ebe6dc}.feat{background:#fffefb;padding:18px 16px;display:flex;align-items:center;gap:12px}.feat .ico{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--olive-soft);color:var(--olive-deep);font-size:20px}.feat b{display:block;font-size:13px}.feat span{font-size:11px;color:#7a8178}
 .status{display:inline-flex;align-items:center;gap:7px;font-size:11px;color:#5e6f56}.status:before{content:"";width:7px;height:7px;border-radius:50%;background:#6b875f;box-shadow:0 0 0 4px #e9f0e5}.toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%) translateY(30px);opacity:0;background:#263324;color:#fff;padding:12px 18px;border-radius:13px;transition:.3s;z-index:50;box-shadow:var(--shadow)}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-@media(max-width:1100px){.nav{display:none}.grid-main{grid-template-columns:1fr}.dashboard{grid-template-columns:repeat(2,1fr)}.score-row{grid-template-columns:160px repeat(2,1fr)}.diag-grid{grid-template-columns:repeat(2,1fr)}.foot-features{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1100px){.tech-strip{grid-template-columns:repeat(3,1fr)}.nav{display:none}.grid-main{grid-template-columns:1fr}.dashboard{grid-template-columns:repeat(2,1fr)}.score-row{grid-template-columns:160px repeat(2,1fr)}.diag-grid{grid-template-columns:repeat(2,1fr)}.foot-features{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:650px){.shell{padding:0 12px 18px}.topbar{height:64px}.reviewer,.tools .iconbtn{display:none}.brand h1{font-size:22px}.hero-inner{padding:28px 18px}.hero h2{font-size:31px}.hero-actions{display:grid}.upload{width:100%}.upload .hint{display:none}.grid-main,.dashboard{grid-template-columns:1fr}.score-row{grid-template-columns:1fr 1fr}.score-ring{grid-column:1/-1}.diag-grid{grid-template-columns:1fr}.video-wrap{height:300px}.foot-features{grid-template-columns:1fr}.btn.primary{width:100%}}
 </style>
 </head>
@@ -43,6 +52,17 @@ button,input{font:inherit}.shell{max-width:1540px;margin:auto;padding:0 24px 28p
     <div class="eyebrow">AI × YOGA · 可解释视觉教学智能体</div>
     <h2>让身体成为可读的学习界面</h2>
     <p>AI读懂每一个动作，辅助教师完成更专业、更连续、更可解释的瑜伽教学与评价。</p>
+    <div class="control-strip">
+      <div class="select-wrap"><span>动作</span><select id="poseSelect">
+        <option value="warrior1">战士一式</option><option value="warrior2" selected>战士二式</option>
+        <option value="tadasana">山式</option><option value="sukhasana">简易坐</option>
+        <option value="uttanasana">站立前屈式</option><option value="cobra">眼镜蛇式</option>
+        <option value="balance">平衡式</option><option value="downward">下犬式</option>
+      </select></div>
+      <div class="select-wrap"><span>视角</span><select id="viewSelect"><option value="front">正位</option><option value="side">侧位</option></select></div>
+      <div class="select-wrap"><span>难度</span><select id="levelSelect"><option value="normal">普通</option><option value="beginner">新手</option></select></div>
+      <span class="engine-badge" id="engineBadge">VectorBody_v2 · 演示模式</span>
+    </div>
     <div class="hero-actions">
       <div class="upload"><label>⇧ 上传瑜伽练习视频<input id="file" type="file" accept="video/*"></label><span class="hint" id="fileHint">支持 MP4 / MOV；评审演示版不会上传到服务器</span><button class="btn secondary" id="demoBtn">▷ 使用示例</button></div>
       <button class="btn primary" id="analyzeBtn">开始评估 →</button>
@@ -76,42 +96,51 @@ button,input{font:inherit}.shell{max-width:1540px;margin:auto;padding:0 24px 28p
     <div class="card-title"><div class="title-left">⌁ 评估结果总览 <span class="micro" id="timeText">评估时间：—</span></div><span class="micro">查看详细报告 →</span></div>
     <div class="score-row">
       <div class="score-ring"><div class="ring"><b id="score">86</b><small>综合评分 / 100</small></div></div>
-      <div class="metric"><div class="ico">◌</div><strong id="m1">88</strong><span>姿态符合度</span><div class="bar"><i style="width:88%"></i></div></div>
-      <div class="metric"><div class="ico">△</div><strong id="m2">84</strong><span>支撑稳定性</span><div class="bar"><i style="width:84%"></i></div></div>
-      <div class="metric"><div class="ico">⚖</div><strong id="m3">81</strong><span>结构对称性</span><div class="bar"><i style="width:81%"></i></div></div>
+      <div class="metric"><div class="ico">◌</div><strong id="m1">88</strong><span>关节-姿态符合度</span><div class="bar"><i style="width:88%"></i></div></div>
+      <div class="metric"><div class="ico">△</div><strong id="m2">84</strong><span>拓扑稳定与代偿控制</span><div class="bar"><i style="width:84%"></i></div></div>
+      <div class="metric"><div class="ico">⚖</div><strong id="m3">81</strong><span>支撑-代偿视觉代理</span><div class="bar"><i style="width:81%"></i></div></div>
       <div class="metric"><div class="ico">✓</div><strong id="m4">低</strong><span>代偿风险</span><div class="bar"><i style="width:78%"></i></div></div>
     </div>
     <div class="summary" id="summary">整体表现良好，体式结构稳定。建议重点关注后膝对齐与核心控制。</div>
     <div class="diagnosis">
       <div class="title-left">⌁ 问题定位与纠正建议 <span class="micro">从问题发现到改善验证</span></div>
       <div class="diag-grid">
-        <div class="diag"><span class="step">01</span><em>问题位置</em><b>后膝关节（右腿）</b><span>检测到膝—踝运动链方向偏移</span></div>
-        <div class="diag"><span class="step">02</span><em>异常表现</em><b>后膝轻度内扣</b><span>与脚尖方向存在轻微不一致</span></div>
-        <div class="diag"><span class="step">03</span><em>纠正建议</em><b>膝盖对准第二脚趾</b><span>激活大腿外侧肌群，保持髋膝踝对齐</span></div>
-        <div class="diag"><span class="step">04</span><em>改善验证</em><b>预计 +6～9 分</b><span>再次练习后比较关键角度与稳定度</span></div>
+        <div class="diag"><span class="step">01</span><em>动作规则</em><b id="diagRule">前膝屈曲 / 骨盆中正</b><span>依据当前动作的分项规则与权重进行评价</span></div>
+        <div class="diag"><span class="step">02</span><em>代偿风险</em><b id="diagRisk">灵活关节锁定 12%</b><span id="diagRiskSub">非灵活关节代偿 9%</span></div>
+        <div class="diag"><span class="step">03</span><em>实时纠正</em><b id="diagAdvice">保持膝—踝对齐</b><span>系统按 A/B/C/D 评分阶梯生成可执行语音/文字反馈</span></div>
+        <div class="diag"><span class="step">04</span><em>稳定性验证</em><b id="diagHold">保持阶段 · 有效</b><span>稳定保持后学习虚拟骨长参考并验证连续帧一致性</span></div>
       </div>
+      <div class="tech-strip">
+        <div class="tech"><b id="tNodes">23</b><span>拓扑节点</span></div>
+        <div class="tech"><b id="tEdges">21</b><span>拓扑骨骼边</span></div>
+        <div class="tech"><b id="tIK">3</b><span>DLS-IK 迭代</span></div>
+        <div class="tech"><b id="tResidual">0.0042</b><span>最终残差</span></div>
+        <div class="tech"><b id="tBone">可信</b><span>虚拟骨长状态</span></div>
+        <div class="tech"><b id="tBest">12.4s</b><span>视频最高分时刻</span></div>
+      </div>
+      <div class="notice" id="modeNotice">当前为脱敏评审示例。接入 VectorBody Web API 后，上传视频将按真实流程完成 MediaPipe 33关键点 → OneEuroFilter → 骨盆根拓扑 → DLS结构/时序优化 → 多维评分 → 可解释反馈。结果仅用于教学辅助，不用于医疗诊断。</div>
     </div>
   </article>
 </section>
 
 <section class="dashboard">
-  <article class="card dash"><h4>班级错误分布</h4>
+  <article class="card dash"><h4>动作分项风险</h4>
     <div class="rowbar"><span>膝盖对齐</span><div class="track"><div class="fill" style="width:32%"></div></div><b>32%</b></div>
     <div class="rowbar"><span>骨盆倾斜</span><div class="track"><div class="fill" style="width:24%"></div></div><b>24%</b></div>
     <div class="rowbar"><span>核心不稳</span><div class="track"><div class="fill" style="width:18%"></div></div><b>18%</b></div>
     <div class="rowbar"><span>肩颈紧张</span><div class="track"><div class="fill" style="width:15%"></div></div><b>15%</b></div>
     <div class="rowbar"><span>重心偏移</span><div class="track"><div class="fill" style="width:11%"></div></div><b>11%</b></div>
   </article>
-  <article class="card dash"><h4>体式表现趋势</h4>
+  <article class="card dash"><h4>评分维度趋势</h4>
     <svg class="chart" viewBox="0 0 310 120"><path d="M10 98 H300 M10 63 H300 M10 28 H300" stroke="#e8e2d8"/><path d="M12 83 C55 78,65 52,102 58 S160 74,196 61 S250 60,298 39" fill="none" stroke="#647553" stroke-width="3"/><path d="M12 68 C55 55,69 43,103 47 S165 50,197 49 S250 42,298 30" fill="none" stroke="#d8a63a" stroke-width="3"/></svg>
     <div class="micro">● 稳定性　<span style="color:#b88b25">● 姿态贴合度</span></div>
   </article>
-  <article class="card dash"><h4>个人进步曲线</h4>
+  <article class="card dash"><h4>训练增值曲线</h4>
     <svg class="chart" viewBox="0 0 310 120"><path d="M10 96 H300" stroke="#e8e2d8"/><path d="M12 96 C44 86,60 82,88 70 S135 59,160 57 S211 44,237 43 S278 31,300 17" fill="none" stroke="#647553" stroke-width="4"/><circle cx="300" cy="17" r="5" fill="#d8a63a"/></svg>
     <div><b style="color:#35502f;font-size:22px">+28%</b> <span class="micro">近30天综合提升</span></div>
   </article>
   <article class="card dash"><h4>练习记录</h4><div class="records"><div class="record"><span>战士二式 · 10/28</span><b>86分</b></div><div class="record"><span>三角式 · 10/25</span><b style="color:#b88b25">78分</b></div><div class="record"><span>下犬式 · 10/22</span><b>82分</b></div><div class="record"><span>树式 · 10/18</span><b style="color:#b88b25">76分</b></div></div></article>
-  <article class="card dash"><h4>教师复核状态</h4><div class="donut"></div><div class="legend"><div><i style="background:#647553"></i>已复核 3</div><div><i style="background:#d8a63a"></i>待复核 1</div><div><i style="background:#d9d5cc"></i>需关注 1</div></div></article>
+  <article class="card dash"><h4>系统可信度</h4><div class="donut"></div><div class="legend"><div><i style="background:#647553"></i>已复核 3</div><div><i style="background:#d8a63a"></i>待复核 1</div><div><i style="background:#d9d5cc"></i>需关注 1</div></div></article>
 </section>
 
 <section class="foot-features">
@@ -124,9 +153,59 @@ button,input{font:inherit}.shell{max-width:1540px;margin:auto;padding:0 24px 28p
 </div>
 <div class="toast" id="toast">正在生成可解释评估结果…</div>
 <script>
+const API_BASE = (window.ZHIYUJING_API_URL || localStorage.getItem('zhiyujing_api') || '').replace(/\/$/,'');
 const file=document.getElementById('file'), video=document.getElementById('video'), pose=document.getElementById('poseDemo'), hint=document.getElementById('fileHint'), toast=document.getElementById('toast');
-file.addEventListener('change',()=>{const f=file.files[0]; if(!f)return; hint.textContent=f.name+' · '+(f.size/1024/1024).toFixed(1)+' MB · 本地预览'; video.src=URL.createObjectURL(f); video.style.display='block'; pose.style.display='none'; video.play().catch(()=>{});});
-document.getElementById('demoBtn').onclick=()=>{video.pause();video.removeAttribute('src');video.style.display='none';pose.style.display='grid';hint.textContent='已载入内置脱敏示例 · 战士二式';toast.textContent='已切换到评审示例';toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1600)};
-document.getElementById('analyzeBtn').onclick=()=>{toast.textContent='正在生成可解释评估结果…';toast.classList.add('show');document.getElementById('timeText').textContent='评估中：关键点 → 拓扑 → DLS → 多维评价';setTimeout(()=>{const base=84+Math.floor(Math.random()*5);document.getElementById('score').textContent=base;document.getElementById('m1').textContent=base+2;document.getElementById('m2').textContent=base-2;document.getElementById('m3').textContent=base-5;document.getElementById('summary').textContent='整体表现良好。系统已完成结构化运动理解，并给出可执行的个性化纠正建议。';document.getElementById('timeText').textContent='评估完成 · '+new Date().toLocaleTimeString();toast.textContent='评估完成：已生成诊断与教学反馈';setTimeout(()=>toast.classList.remove('show'),1600)},900)};
+const poseSelect=document.getElementById('poseSelect'), viewSelect=document.getElementById('viewSelect'), levelSelect=document.getElementById('levelSelect');
+const poseNames={warrior1:'战士一式',warrior2:'战士二式',tadasana:'山式',sukhasana:'简易坐',uttanasana:'站立前屈式',cobra:'眼镜蛇式',balance:'平衡式',downward:'下犬式'};
+const demo={
+ score:86,grade:'A',risk:14,advice:'轻度代偿风险：前膝保持对准第二、第三脚趾，骨盆与腰椎保持中立。',
+ dimensions:{joint_conformity:88,topology_stability:84,force_proxy:81},
+ compensation:{mobile_lock_risk:12,stiff_comp_risk:9},
+ confidence:{bone_length_ready:true,bone_length_valid:true,bone_length_quality:92,bone_length_max_deviation:2.8},
+ topology_ik:{node_count:23,edge_count:21,ik_iterations:3,ik_final_residual:.0042,ik_max_length_error:1.8},
+ hold:{phase:'保持检测中',motion_ratio:.008},
+ time_sec:12.4
+};
+function toastMsg(msg){toast.textContent=msg;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)}
+function applyResult(r,source='示例'){
+ document.getElementById('score').textContent=Math.round(r.score);
+ document.getElementById('m1').textContent=Math.round(r.dimensions.joint_conformity);
+ document.getElementById('m2').textContent=Math.round(r.dimensions.topology_stability);
+ document.getElementById('m3').textContent=Math.round(r.dimensions.force_proxy);
+ document.getElementById('m4').textContent=r.risk<15?'低':r.risk<30?'中':'高';
+ document.getElementById('summary').textContent='VectorBody综合评分 '+Math.round(r.score)+' / 100（'+r.grade+'级）。'+(r.advice||'');
+ document.getElementById('diagRule').textContent=poseNames[poseSelect.value]+' · '+(viewSelect.value==='front'?'正位':'侧位')+'规则';
+ document.getElementById('diagRisk').textContent='灵活关节锁定 '+Math.round(r.compensation.mobile_lock_risk)+'%';
+ document.getElementById('diagRiskSub').textContent='非灵活关节代偿 '+Math.round(r.compensation.stiff_comp_risk)+'%';
+ document.getElementById('diagAdvice').textContent=r.advice||'保持当前动作并继续观察';
+ document.getElementById('diagHold').textContent=(r.hold.phase||'保持阶段')+' · '+(r.confidence.bone_length_valid?'可信':'待建立');
+ document.getElementById('tNodes').textContent=r.topology_ik.node_count||'—';
+ document.getElementById('tEdges').textContent=r.topology_ik.edge_count||'—';
+ document.getElementById('tIK').textContent=r.topology_ik.ik_iterations||'—';
+ document.getElementById('tResidual').textContent=(r.topology_ik.ik_final_residual??0).toFixed(4);
+ document.getElementById('tBone').textContent=r.confidence.bone_length_ready?(r.confidence.bone_length_valid?'可信':'异常'):'建立中';
+ document.getElementById('tBest').textContent=(r.time_sec??0).toFixed(1)+'s';
+ document.getElementById('timeText').textContent='评估完成 · '+source+' · '+new Date().toLocaleTimeString();
+}
+file.addEventListener('change',()=>{const f=file.files[0];if(!f)return;hint.textContent=f.name+' · '+(f.size/1024/1024).toFixed(1)+' MB · '+(API_BASE?'将提交至评审API':'仅本地预览');video.src=URL.createObjectURL(f);video.style.display='block';pose.style.display='none';video.play().catch(()=>{})});
+document.getElementById('demoBtn').onclick=()=>{video.pause();video.removeAttribute('src');video.style.display='none';pose.style.display='grid';hint.textContent='已载入脱敏示例 · '+poseNames[poseSelect.value];applyResult(demo,'脱敏示例');toastMsg('已切换到评审示例')};
+async function checkApi(){if(!API_BASE)return false;try{const r=await fetch(API_BASE+'/health');if(!r.ok)return false;document.getElementById('engineBadge').textContent='VectorBody_v2 · 实时引擎已连接';document.getElementById('modeNotice').textContent='实时引擎已连接：上传视频会发送至 VectorBody Web API，完成真实算法评估。评审数据按部署策略处理，仅用于教学辅助。';return true}catch(e){return false}}
+document.getElementById('analyzeBtn').onclick=async()=>{
+ const f=file.files[0];
+ if(!API_BASE || !f){applyResult(demo,'脱敏示例');toastMsg(!API_BASE?'当前未连接后端，展示真实算法字段的脱敏示例':'请先上传视频；已展示示例结果');return}
+ toast.textContent='正在执行 MediaPipe → OneEuroFilter → 拓扑 → DLS → 多维评分…';toast.classList.add('show');document.getElementById('timeText').textContent='实时评估中…';
+ try{
+  const fd=new FormData();fd.append('file',f);
+  const url=API_BASE+'/analyze-video?pose='+encodeURIComponent(poseSelect.value)+'&view='+viewSelect.value+'&level='+levelSelect.value;
+  const resp=await fetch(url,{method:'POST',body:fd});
+  const data=await resp.json();
+  if(!resp.ok)throw new Error(data.detail||'评估失败');
+  applyResult(data.result,'VectorBody_v2 实时分析');
+  toastMsg('真实引擎评估完成 · 最佳帧 '+data.video.best_frame);
+ }catch(e){document.getElementById('timeText').textContent='评估失败';toastMsg('实时分析失败：'+e.message)}
+};
+poseSelect.onchange=()=>{document.querySelector('.pose-tag').innerHTML=poseNames[poseSelect.value]+'<br><small>'+poseSelect.value+'</small>';hint.textContent='已选择 '+poseNames[poseSelect.value]+' · '+(viewSelect.value==='front'?'正位':'侧位')};
+viewSelect.onchange=()=>{hint.textContent='已选择 '+poseNames[poseSelect.value]+' · '+(viewSelect.value==='front'?'正位':'侧位')};
+applyResult(demo,'脱敏示例');checkApi();
 </script>
 </body></html>
